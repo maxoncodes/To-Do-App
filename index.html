@@ -1,0 +1,59 @@
+<!--
+  Copyright © 2026 maxoncodes.online
+  All rights reserved.
+  Developed by maxoncodes.online
+  Unauthorized copying or reproduction is prohibited.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mordern · to‑do</title>
+    <!-- Google Font & simple icons via Font Awesome (clean, modern) -->
+     <link rel="shortcut icon" href="images/fevicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+    <link rel="stylesheet" href="style.css">  
+</head>
+<body>
+<div class="todo-container">
+    <h1>
+        <i class="fas fa-list-check"></i> 
+        do·today
+    </h1>
+    <div class="sub-header">smooth tasks, zero clutter</div>
+
+    <!-- input row -->
+    <div class="add-task">
+        <input type="text" id="taskInput" placeholder="e.g., AI Projetc, Python Project ..." autofocus>
+        <button id="addTaskBtn" aria-label="add task">
+            <i class="fas fa-plus"></i>
+        </button>
+    </div>
+
+    <!-- filter tabs -->
+    <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all"><i class="fas fa-list-ul"></i> All</button>
+        <button class="filter-btn" data-filter="active"><i class="fas fa-circle"></i> Active</button>
+        <button class="filter-btn" data-filter="completed"><i class="fas fa-check-circle"></i> Completed</button>
+    </div>
+
+    <!-- dynamic task list -->
+    <ul class="task-list" id="taskList"></ul>
+
+    <!-- footer with counters & clear -->
+    <div class="footer-stats">
+        <div class="counter" id="taskCounter">
+            <i class="fas fa-clipboard-list"></i>
+            <span id="counterValue">0</span> tasks
+        </div>
+        <div class="maxoncodes"><a href="https://www.maxoncodes.online/" target="_blank" rel="noopener noreferrer">Design by MaxonCodes</a></div>
+        <button class="clear-all" id="clearAllBtn"><i class="fas fa-trash-alt"></i> clear all</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
